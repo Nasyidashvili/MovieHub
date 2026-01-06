@@ -7,7 +7,7 @@
 
 body {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     font-family: Arial, sans-serif;
     background-color: #141414;
 }
@@ -29,12 +29,12 @@ header {
     left: 0;
     right: 0;
     max-width: 100%;
-    height: 134px;
+    height: 135px;
     background-color: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 400px;
+    gap: 500px;
     padding: 25px 80px;
     margin: 0 auto;
     border-radius: 15px;
@@ -42,11 +42,16 @@ header {
     animation: slideDown 0.5s ease-out;
     transition: all 0.3s ease;
 }
+
 .Container {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 21px;
+}
+
+.Container a {
+    text-decoration: none;
 }
 
 .logo {
@@ -122,3 +127,78 @@ header {
 .search-bar input::placeholder {
     color: #B3B3B3;
 }
+
+.carousel {
+    margin-top: 180px;
+    padding: 40px 80px;
+    animation: slideDown 0.5s ease-out;
+    transition: all 0.3s ease;
+}
+
+.carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.4s ease;
+}
+
+.movie-card {
+    width: 800px;
+    height: 350px;
+    background-color: #1f1f1f;
+    border-radius: 12px;
+    overflow: hidden;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 1;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.7);
+}
+
+.movie-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.movie-card h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.arrow {
+    position: absolute;
+    top: 40%;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.7);
+    border: 0px solid rgb(0, 0, 0, 0.7);
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+
+
+
