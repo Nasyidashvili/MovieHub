@@ -47,3 +47,14 @@ leftArrow.addEventListener("click", () => {
 
     track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
 });
+
+flatpickr("input[type=datetime-local]", {});
+
+
+const languageSelect = document.querySelector(".filter-select.language");
+const choices = new Choices(languageSelect, {
+    searchEnabled: false,
+    itemSelectText: '',
+    shouldSort: false,
+});
+

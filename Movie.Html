@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MovieHub</title>
     <link rel="stylesheet" href="MovieStyle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 <body>
     <header>
@@ -14,7 +15,13 @@
                 <input type="text" placeholder="Search Movies...">
                 <img src="images/search.png" alt="search">
             </form>
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
+        
 
         <nav class="navLinks">
             <a href="#">Home</a>
@@ -34,7 +41,57 @@
                 <button class="arrow right">&#10095;</button>   
             </div>
         </section>
+
+        <section class="filterSection">
+            <div class="filterRow">
+                <div class="filter-button date">
+                    <span class="filter-icon date">📅</span>
+                    <form class="filter-form date">
+                        <input class="filter-select date" type="datetime-local" placeholder="Select Date">
+                    </form>
+                </div>
+                <div class="filter-button language">
+                    <span class="filter-icon language">🌐</span>
+                    <select class="filter-select language">
+                        <option value="">Language</option>
+                        <option value="georgian">Georgian</option>
+                        <option value="english">English</option>
+                    </select>
+                </div>
+                <div class="filter-button genre">
+                    <span class="filter-icon genre">🎭</span>
+                    <select class="filter-select genre">
+                        <option value="">Genre</option>
+                        <option value="action">Action</option>
+                        <option value="comedy">Comedy</option>
+                        <option value="drama">Drama</option>
+                        <option value="horror">Horror</option>
+                        <option value="sci-fi">Sci-Fi</option>
+                    </select>
+                </div>
+                <div class="filter-button subtitles">
+                    <span class="filter-icon subtitles">💬</span>
+                    <select class="filter-select subtitles">
+                        <option value="">Subtitles</option>
+                        <option value="geo">GEO</option>
+                        <option value="eng">ENG</option>
+                        <option value="no subtitles">No Subtitles</option>
+                    </select>
+                </div>
+                <div class="filter-button format">
+                    <span class="filter-icon format">🎬</span>
+                    <select class="filter-select format">
+                        <option value="">Format</option>
+                        <option value="3d">3D</option>
+                        <option value="IMAX">IMAX</option>
+                        <option value="ScreenX">ScreenX</option>
+                    </select>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
     <script src="app.js"></script>
 </body>

@@ -43,6 +43,43 @@ header {
     transition: all 0.3s ease;
 }
 
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.burger span {
+    display: block;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+    .burger {
+        display: flex;
+    }
+    .navLinks {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #000;
+        width: 200px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .navLinks.active {
+        display: flex;
+    }
+}
+
+
 .Container {
     display: flex;
     flex-direction: row;
@@ -147,14 +184,13 @@ header {
 }
 
 .movie-card {
-    width: 800px;
+    width: 500px;
     height: 350px;
     background-color: #1f1f1f;
     border-radius: 12px;
     overflow: hidden;
     color: white;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    flex-shrink: 1;
 }
 
 .movie-card:hover {
@@ -170,7 +206,7 @@ header {
 
 .movie-card h3 {
     position: absolute;
-    bottom: 0;
+    bottom: 8px;
     width: 100%;
     padding: 15px;
     font-size: 16px;
@@ -199,6 +235,78 @@ header {
     right: 10px;
 }
 
+.filterSection {
+    padding: 30px 80px;
+    background-color: #08002510;
+    border-top: 1px solid #2a2a2a;
+    border-bottom: 1px solid #2a2a2a;
+}   
 
+.filterRow {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
+.filter-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 20px;
+    background-color: #2a2a2a;
+    border: 1px solid #555555;
+    border-radius: 15px;
+    min-width: 200px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+ 
+.filter-button:hover {
+    border-color: #E50914;
+    background-color: #333333;
+}
+
+.filer-icon {
+    font-size: 18px;
+}
+
+.filter-select {
+    background: transparent;
+    border: none;
+    flex: 1;
+    color: #B3B3B3;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+
+.filter-select option {
+  padding: 10px 16px;
+  border-radius: 12px;
+  background-color: #2a2a2a;
+  color: white;
+  margin-bottom: 5px;
+  cursor: pointer;
+
+}
+
+@media (max-width: 768px) {
+    .filterRow {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .filter-button {
+        width: 100%;
+    }
+}
+
+.filter-select.active {
+    background-color: #333;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
 
