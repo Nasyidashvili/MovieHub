@@ -43,6 +43,23 @@ header {
     transition: all 0.3s ease;
 }
 
+@media (max-width: 1024px ) {
+    header {
+        gap: 200px;
+        padding: 25px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        gap: 0;
+        justify-content: space-between;
+        padding: 20px 30px;
+        height: 80px;
+        border-radius: 0;
+    }
+}
+
 .burger {
     display: none;
     flex-direction: column;
@@ -57,24 +74,11 @@ header {
     height: 3px;
     background-color: white;
     border-radius: 3px;
+        transition: all 0.3s ease;
 }
 
 @media (max-width: 768px) {
     .burger {
-        display: flex;
-    }
-    .navLinks {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background-color: #000;
-        width: 200px;
-        border-radius: 10px;
-        overflow: hidden;
-    }
-    .navLinks.active {
         display: flex;
     }
 }
@@ -95,6 +99,12 @@ header {
     color: #FFFFFF;
     font-size: 24px;
     font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        font-size: 20px;
+    }
 }
 
 .navLinks {
@@ -132,6 +142,36 @@ header {
     width: 100%;
 }
 
+@media (max-width: 768px) {
+    .navLinks {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 80px;
+        right: 0;
+        background-color: #000;
+        width: 100%;
+        max-width: 300px;
+        padding: 30px;
+        border-radius: 0 0 0 15px;
+        box-shadow: -5px 5px 15px rgba(0,0,0,0.5);
+    }
+    
+    .navLinks.active {
+        display: flex;
+    }
+
+    .navLinks a {
+        font-size: 20px;
+        padding: 15px 0;
+        border-bottom: 1px solid #333;
+    }
+
+    .navLinks a:last-child {
+        border-bottom: none;
+    }
+}
+
 .search-bar {
     display: flex;
     align-items: center;
@@ -165,11 +205,42 @@ header {
     color: #B3B3B3;
 }
 
+@media (max-width: 768px) {
+    .search-bar {
+        width: 180px;
+        padding: 6px 12px;
+    }
+
+    .search-bar input {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-bar {
+        width: 150px
+    }
+}
+
 .carousel {
     margin-top: 180px;
     padding: 40px 80px;
     animation: slideDown 0.5s ease-out;
     transition: all 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+    .carousel {
+        margin-top: 120px;
+        padding: 30px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        margin-top: 100px;
+        padding: 20px;
+    }
 }
 
 .carousel-wrapper {
@@ -191,6 +262,7 @@ header {
     overflow: hidden;
     color: white;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0;
 }
 
 .movie-card:hover {
@@ -211,6 +283,20 @@ header {
     padding: 15px;
     font-size: 16px;
     padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .movie-card {
+        width: 300px;
+        height: 200px;
+    }
+    .movie-card img {
+        height: 200px;
+    }
+    .movie-card h3 {
+        font-size: 14px;
+        padding: 10px;
+    }
 }
 
 .arrow {
@@ -235,12 +321,35 @@ header {
     right: 10px;
 }
 
+@media (max-width: 768px) {
+    .arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
+
 .filterSection {
     padding: 30px 80px;
     background-color: #08002510;
     border-top: 1px solid #2a2a2a;
     border-bottom: 1px solid #2a2a2a;
-}   
+    animation: slideDown 0.5s ease-out;
+    transition: all 0.3s ease;
+}
+
+
+@media (max-width: 1024px) {
+    .filterSection {
+        padding: 25px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .filterSection {
+        padding: 20px;
+    }
+}
 
 .filterRow {
     display: flex;
@@ -301,6 +410,7 @@ header {
 
     .filter-button {
         width: 100%;
+        min-width: unset;
     }
 }
 
@@ -309,4 +419,129 @@ header {
     border-radius: 12px;
     transition: all 0.3s ease;
 }
+
+
+.cardRow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 95px;
+    padding: 40px 80px;
+}
+
+
+@media (max-width: 1024px) {
+    .cardRow {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding: 30px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cardRow {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 20px;
+    }
+}
+
+.heroCard {
+    background-color: #1f1f1f;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: white;
+}
+
+.heroCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(229, 9, 20, 0.3);
+}
+
+.heroCard img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .heroCard img {
+        height: 300px;
+    }
+}
+
+.card-info {
+    padding: 20px;
+}
+
+.card-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card-info p {
+    font-size: 14px;
+    color: #B3B3B3;
+    margin-bottom: 10px;
+}
+
+.format-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    background-color: #E50914;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.comingSoonCard {
+    position: relative;
+}
+
+.comingSoonOverlay {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    text-align: center;
+}
+
+.comingSoonText {
+    font-size: 24px;
+    font-weight: bold;
+    color: #E50914;
+}
+
+.comingSoonOverlay h3 {
+    font-size: 22px;
+    color: white;
+}
+
+.releaseDate {
+    font-size: 14px;
+    color:  #FFD700;
+}
+
+@media (max-width: 768px) {
+    .comingSoonText {
+        font-size: 18px;
+    }
+
+    .comingSoonOverlay h3 {
+        font-size: 18px;
+    }
+}
+
+
+
+
 

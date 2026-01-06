@@ -1,37 +1,85 @@
-[
+{
+  "nowShowing": [
   {
     "title": "Avatar",
     "poster": "movie/avatar.webp",
     "genre": "Sci-Fi",
-    "language": "English",
+    "language": "GEO",
     "format": "IMAX"
   },
   {
     "title": "Joker",
     "poster": "movie/joker.png",
     "genre": "Drama",
-    "language": "English",
+    "language": "ENG",
     "format": "ScreenX"
   },
   {
     "title": "Zootopia",
     "poster": "movie/zootopia.webp",
     "genre": "Animation",
-    "language": "English",
+    "language": "GEO",
     "format": "3D"
   },
   {
     "title": "Anaconda",
     "poster": "movie/anaconda.webp",
     "genre": "Action",
-    "language": "English",
+    "language": "GEO",
     "format": "3D"
   },
   {
     "title": "Batman",
     "poster": "movie/batman.jpg",
     "genre": "Action",
-    "language": "English",
+    "language": "ENG",
     "format": "IMAX"
+  },
+  {
+    "title": "Conjur",
+    "poster": "movie/conjur.webp",
+    "genre": "Horror",
+    "language": "GEO",
+    "format": "IMAX"
+  },
+  {
+    "title": "Spider-Man",
+    "poster": "movie/spiderman.png",
+    "genre": "Horror",
+    "language": "ENG",
+    "format": "ScreenX"
   }
-]
+  ],
+  "comingSoon": [
+    {
+      "title": "Avengers: Doomsday",
+      "poster": "comingsoon/avengers.jpeg",
+      "releaseDate": "2026-12-18",
+      "genre": "Action"
+    },
+    {
+      "title": "Dune 3",
+      "poster": "comingsoon/dune3.jpg",
+      "releaseDate": "2026-12-23",
+      "genre": "Sci-Fi"
+    },
+    {
+      "title": "Jumanji 3",
+      "poster": "comingsoon/jumanji.jpeg",
+      "releaseDate": "2026-12-11",
+      "genre": "Drama"
+    },
+    {
+      "title": "The Legend of Aang: The Last Airbender",
+      "poster": "comingsoon/avatar.jpg",
+      "releaseDate": "2026-10-09",
+      "genre": "Animation"
+    },
+    {
+      "title": "Spider-Man: Brand New Day",
+      "poster": "comingsoon/spiderman.jpg",
+      "releaseDate": "2026-7-31",
+      "genre": "Action"
+    }
+  ]
+}
