@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Avatar",
+    "poster": "movie/avatar.webp",
+    "genre": "Sci-Fi",
+    "language": "English",
+    "format": "IMAX"
+  },
+  {
+    "title": "Joker",
+    "poster": "movie/joker.png",
+    "genre": "Drama",
+    "language": "English",
+    "format": "ScreenX"
+  },
+  {
+    "title": "Zootopia",
+    "poster": "movie/zootopia.webp",
+    "genre": "Animation",
+    "language": "English",
+    "format": "3D"
+  },
+  {
+    "title": "Anaconda",
+    "poster": "movie/anaconda.webp",
+    "genre": "Action",
+    "language": "English",
+    "format": "3D"
+  },
+  {
+    "title": "Batman",
+    "poster": "movie/batman.jpg",
+    "genre": "Action",
+    "language": "English",
+    "format": "IMAX"
+  }
+]
