@@ -49,11 +49,11 @@ fetch("movies.json")
       comingCard.href = "#";
       comingCard.innerHTML = `
         <img src="${movie.poster}" alt="${movie.title}">
-        <div class="comingSoonOverlay">
-          <span class="comingSoonText">Coming Soon</span>
+        <div class="card-info">
           <h3>${movie.title}</h3>
-          <span class="releaseDate">📅 ${movie.releaseDate || 'TBA'}</span>
-          <p style="color: #B3B3B3;">🎭 ${movie.genre}</p>
+          <p>🎭 ${movie.genre}</p>
+          <p>📅 ${movie.releaseDate || 'TBA'}</p>
+          <span class="format-badge coming">Coming Soon</span>
         </div>`;
       comingSoonGrid.appendChild(comingCard);   
     })
@@ -84,6 +84,38 @@ leftArrow.addEventListener("click", () => {
 
 flatpickr("input[type=datetime-local]", {});
 
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const targetId = this.getAttribute("href");
+
+    if(targetId === '#home') {
+      window.scrollTo ({
+        top: 0,
+        behavior: 'smooth'       
+      });
+    }
+    else {
+      const targetSection = document.querySelector(targetId);
+      if(targetSection) {
+        const headerHeight = 135;
+        const targetPosition = targetSection.offsetTop - headerHeight;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+  });
+})
+
+
+
+
+
 const burger = document.querySelector('.burger');
 const navLinks = document.querySelector('.navLinks');
 
@@ -103,54 +135,28 @@ window.addEventListener('scroll', () => {
 });
 
 
-// const languageSelect = document.querySelector(".filter-select.language");
-// const choices = new Choices(languageSelect, {
-//     searchEnabled: false,
-//     itemSelectText: '',
-//     shouldSort: false,
-// });
+const sections = document.querySelectorAll('section[id]');
+const navLinksAll = document.querySelectorAll('.navLinks a');
 
-
-// function renderMovies(movies) {
-//   track.innerHTML = "";
-
-//   movies.forEach(movie => {
-//     const card = document.createElement("a");
-//     card.classList.add("movie-card");
-//     card.href = "#"; 
-
-//     card.innerHTML = `
-//       <img src="${movie.poster}" alt="${movie.title}">
-//       <h3>${movie.title}</h3>
-//       <p>${movie.genre} | ${movie.language} | ${movie.format}</p>
-//     `;
-
-//     track.appendChild(card);
-//   });
-// }
-
-
-// fetch("movies.json")
-//   .then(res => res.json())
-//   .then(movies => {
-//     window.allMovies = movies;  
-
-//     renderMovies(movies); 
-//   })
-//   .catch(err => console.error(err));
-
-
-// const genreFilter = document.querySelector(".filter-select.genre");
-
-// genreFilter.addEventListener("change", (e) => {
-//   const selectedGenre = e.target.value;
-
-//   const filteredMovies = selectedGenre 
-//     ? window.allMovies.filter(m => m.genre === selectedGenre)
-//     : window.allMovies;
-
-//   renderMovies(filteredMovies);
-// });
+window.addEventListener('scroll', () => {
+    let current = '';
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        if (window.scrollY >= (sectionTop - 200)) {
+            current = section.getAttribute('id');
+        }
+    });
+    
+    navLinksAll.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+        }
+    });
+});
 
 
 

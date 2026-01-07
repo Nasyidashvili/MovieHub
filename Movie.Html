@@ -24,21 +24,21 @@
         
 
         <nav class="navLinks">
-            <a href="#">Home</a>
-            <a href="#">Movies</a>
-            <a href="#">About</a>
+            <a href="#home">Home</a>
+            <a href="#movies">Movies</a>
+            <a href="#about">About</a>
         </nav>
     </header>
 
     <main> 
-        <section class="carousel">
+        <section class="carousel" id="home">
 
             <div class="carousel-wrapper">
-                <button class="arrow left">&#10094;</button>
+                <button class="arrow left"><</button>
                 <div class="carousel-track" id="carouselTrack">
                     
                 </div>
-                <button class="arrow right">&#10095;</button>   
+                <button class="arrow right">></button>   
             </div>
         </section>
 
@@ -91,19 +91,55 @@
             </div>
         </section>
 
-        <section class="cardSection">
+        <section class="cardSection" id="movies">
             <div class="cardRow" id="cardRow">
 
             </div>            
         </section>
 
-        <section class="comingSoon">
+        <section class="cardSection comingSoon">
             <h2 class="sectionTitle">Coming Soon...</h2>
             <div class="cardRow" id="comingSoonRow">
                     
             </div>
         </section>
+        <section class="aboutSection" id="about">
+            <div class="aboutContainer">
+                <h2 class="sectionTitle">About MovieHub</h2>
+                <div class="aboutContent">
+                    <p>🎬 MovieHub is your ultimate destination for discovering and booking the latest movies.</p>
+                    <p>We provide real-time showtimes, detailed movie information, and seamless booking experience.</p>
+                    <div class="aboutFeatures">
+                        <div class="feature">
+                            <span class="featureIcon">🎥</span>
+                            <h3>Latest Movies</h3>
+                            <p>Stay updated with newest releases</p>
+                        </div>
+                        <div class="feature">
+                            <span class="featureIcon">⏰</span>
+                            <h3>Real-time Showtimes</h3>
+                            <p>Check available sessions instantly</p>
+                        </div>
+                        <div class="feature">
+                            <span class="featureIcon">🎭</span>
+                            <h3>Multiple Formats</h3>
+                            <p>IMAX, 3D, ScreenX, available</p>
+                        </div>
+                    </div>
+                    <div class="contactInfo">
+                        <h3>Contact US</h3>
+                        <p>📧 Email: info@moviehub.ge</p>
+                        <p>📱 Phone: +995 XXX XXX XXX</p>
+                        <p>📍 Location: Tbilisi, Georgia</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer>
+        <p>&copy; 2024 MovieHub. All rights reserved.</p>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
