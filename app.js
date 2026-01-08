@@ -3,7 +3,7 @@ const moviesGrid = document.getElementById("cardRow");
 const comingSoonGrid = document.getElementById("comingSoonRow");
 
 let currentIndex = 0;
-const cardWidth = 820;
+const cardWidth = 520;
 let totalMovies = 0;
 
 const rightArrow = document.querySelector(".arrow.right");
@@ -111,9 +111,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 })
-
-
-
 
 
 const burger = document.querySelector('.burger');

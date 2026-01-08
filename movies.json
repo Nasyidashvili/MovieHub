@@ -29,13 +29,6 @@
     "format": "3D"
   },
   {
-    "title": "Batman",
-    "poster": "movie/batman.jpg",
-    "genre": "Action",
-    "language": "ENG",
-    "format": "IMAX"
-  },
-  {
     "title": "Conjur",
     "poster": "movie/conjur.webp",
     "genre": "Horror",
@@ -80,6 +73,12 @@
       "poster": "comingsoon/spiderman.jpg",
       "releaseDate": "2026-7-31",
       "genre": "Action"
+    },
+    {
+      "title": "Charlie the Wonderdog",
+      "poster": "comingsoon/charlie.webp",
+      "releaseDate": "2026-2-15",
+      "genre": "Comedy"
     }
   ]
 }
