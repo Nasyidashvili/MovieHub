@@ -9,6 +9,31 @@ let totalMovies = 0;
 const rightArrow = document.querySelector(".arrow.right");
 const leftArrow = document.querySelector(".arrow.left");
 
+// fixed header
+
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('header');
+  
+  if (window.scrollY > 0) {
+    header.style.position = 'fixed';
+    header.style.top = '0';
+    header.style.left = '0';
+    header.style.right = '0';
+    header.style.zIndex = '1000';
+    header.style.height = '80px';
+  } else {
+    header.style.position = 'relative';
+    header.style.height = '135px';
+  }
+});
+
+
+
+// movie grid
+// 1. carousel section
+// 2. nowshowing section
+// 3. comingsoon section
+
 fetch("movies.json")
   .then(response => response.json()) 
   .then(data => {
@@ -63,6 +88,9 @@ fetch("movies.json")
   .catch(err => console.error("Failed to load movies:", err));
 
 
+// carousel right and left arrow buttons
+
+
 rightArrow.addEventListener("click", () => {
     currentIndex++;
     if (currentIndex >= totalMovies) {
@@ -82,8 +110,10 @@ leftArrow.addEventListener("click", () => {
     track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
 });
 
+// date picker
 flatpickr("input[type=datetime-local]", {});
 
+// carousel smooth transiton 
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
@@ -112,6 +142,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 })
 
+// burger menu
 
 const burger = document.querySelector('.burger');
 const navLinks = document.querySelector('.navLinks');
@@ -131,6 +162,8 @@ window.addEventListener('scroll', () => {
   }
 });
 
+
+// navlinks scroll transition
 
 const sections = document.querySelectorAll('section[id]');
 const navLinksAll = document.querySelectorAll('.navLinks a');
