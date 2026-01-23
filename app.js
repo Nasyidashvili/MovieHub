@@ -113,7 +113,7 @@ leftArrow.addEventListener("click", () => {
 // date picker
 flatpickr("input[type=datetime-local]", {});
 
-// carousel smooth transiton 
+// navlinks scroll transition
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
@@ -163,7 +163,7 @@ window.addEventListener('scroll', () => {
 });
 
 
-// navlinks scroll transition
+// navlinks highilted
 
 const sections = document.querySelectorAll('section[id]');
 const navLinksAll = document.querySelectorAll('.navLinks a');
